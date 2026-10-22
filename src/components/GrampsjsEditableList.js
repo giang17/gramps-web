@@ -201,6 +201,7 @@ export class GrampsjsEditableList extends GrampsjsAppStateMixin(LitElement) {
             </md-icon-button>
           `
         : ''}
+      ${this._renderExtraActionBtns()}
       <md-icon-button
         ?disabled="${this._selectedIndex === -1}"
         class="edit"
@@ -212,6 +213,11 @@ export class GrampsjsEditableList extends GrampsjsAppStateMixin(LitElement) {
         ></grampsjs-icon>
       </md-icon-button>
     `
+  }
+
+  // further action buttons of a subclass, shown before the delete button
+  _renderExtraActionBtns() {
+    return ''
   }
 
   updated(changed) {
